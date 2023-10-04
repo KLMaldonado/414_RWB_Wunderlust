@@ -273,8 +273,6 @@ h1{
 
     section#plan{
         background-color: var(--yellow);
-        border: #000000;
-        border-style: double;
     }
 
     #testimonials{
