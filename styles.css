@@ -268,7 +268,7 @@ h1{
 
     #plan{
         background-color: var(--yellow);   
-        
+        1
     }
 
     section#plan{
@@ -277,8 +277,12 @@ h1{
         border-style: double;
     }
 
+    #testimonials{
+        display: flex;
+        justify-content: center;
+    }
+
     img{
-        margin: none;
         object-fit: fill;
     }
 
@@ -295,17 +299,3 @@ h1{
     }
     
 }
-
-/*---IDs for CSS---*/
-/*
-    skip
-    main-content
-    intro
-    img-grid
-    plan
-    testimonials
-    about
-    contact
-
-*/
-
