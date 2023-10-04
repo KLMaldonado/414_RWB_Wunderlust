@@ -1,0 +1,311 @@
+/*---Karissa Maldonado---*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------- VARIABLES ---------- */
+:root{
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* ---------- FONTS ---------- */
+h1, h2, h3{
+    font-family: 'Molle', cursive;
+}
+
+h4, p, q, small, nav, button, form{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*------------ DARK THEME PREFERENCE SETTINGS --------------*/
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: #000;
+    }
+}
+
+/*------------ SKIP TO CONTENT LINK --------------*/
+#skip
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+ 
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
+
+/* ----- TEXT ----- */
+p, small{
+    font-size: 1em;
+    margin: 0.25em;
+    padding: 0.25em;
+    max-width: 75ch;
+}
+
+/* ----- HEADINGS ----- */
+h1, h2, h3, h4{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 3em;
+    margin: 0.5em 0;
+    display: inline;
+}
+
+h2{
+    font-size: 2em;
+    display: inline;
+}
+
+h3{
+    font-size: 1.75em;
+}
+
+/*------------ MAIN/HEADER/FOOTER --------------*/
+main, header, footer{
+    font-family: sans-serif;
+    color: var(--dark-gray);
+    width: 100%;
+}
+
+header, footer{
+    padding: 1em;
+}
+
+main{
+    max-width: 1795px;
+}
+
+footer{
+    background-color: var(--light-gray);
+}
+
+/* ----- CONTAINERS ----- */
+section{
+    margin: 1em 0;
+    padding: 1em;
+}
+
+/* ---------- EXTRA SMALL SCREEN STYLES ---------- */
+header, footer{
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+section{
+    background-color: var(--red);
+}
+
+h1{
+    color: #222222;
+}
+
+/*------------ NAV TOGGLE SETTINGS ------------*/
+#toggle{
+    display: none;
+}
+
+/*------------ SMALL SCREEN SETTINGS --------------*/
+@media (min-width: 360px){
+    
+    main{
+        display: grid;
+        grid-gap: 2em;
+        grid-template-columns: 1fr;
+        margin: 1em 0;
+        padding: 1em;
+    }
+
+    header{
+        display: grid;
+        justify-content: center;
+    }
+
+#menu-toggle {
+    display: block;
+    position: relative; 
+    top: 50px;
+    left: 50px;  
+    z-index: 1;  
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#menu-toggle a {
+  text-decoration: none;
+  color: #232323;
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+#menu-toggle a:hover {
+  color: var(--white);
+}
+
+#menu-toggle label {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+#menu-toggle label span {
+  display: none;
+}
+
+
+/*
+ * Use absolute positioning to place the menu off-screen
+ */
+#toggle {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  list-style-type: none;
+  /* Hide the menu off-screen to the left */
+  right: -100%;
+  -webkit-transition: left 0.3s ease;
+  -o-transition: left 0.3s ease;
+  transition: left 0.3s ease; 
+}
+
+#toggle li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * Slide the menu in from left when the input is checked
+ */
+#menu-toggle input:checked ~ ul {
+  right: 0;
+}
+
+    footer{
+        background-color: var(--light-gray);
+        color: var(--dark-gray);
+    }
+
+    a.footer{
+        text-decoration: none;
+    }
+
+    section{
+        padding: 1em;
+        margin: 1em;
+    }
+
+    #plan{
+        background-color: var(--yellow);   
+        
+    }
+
+    section#plan{
+        background-color: var(--yellow);
+        border: #000000;
+        border-style: double;
+    }
+
+    img{
+        margin: none;
+        object-fit: fill;
+    }
+
+    h3{
+        font-size: 3.5rem;
+    }
+
+    h4{
+        font-size: 2rem;
+    }
+
+    p{
+        font-size: 1.5em;
+    }
+    
+}
+
+/*---IDs for CSS---*/
+/*
+    skip
+    main-content
+    intro
+    img-grid
+    plan
+    testimonials
+    about
+    contact
+
+*/
+
