@@ -320,12 +320,13 @@ a{
 
     #about{
         background-color: var(--blue);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     div#about{
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
+        width: 20px;
     }
 
     h3{
