@@ -337,6 +337,18 @@ a{
         font-size: 2rem;
     }
 
+    #contact{
+        padding: 25px;
+    }
+
+    .form-required{
+        font-size: .6em;
+    }
+
+    fieldset{
+        padding: 10px;
+    }
+
     header p{
         font-size: 1.5em;
     }
