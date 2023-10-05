@@ -298,7 +298,7 @@ a{
         font-size: 1.25em;
         display: flex;
         flex-direction: column;
-        flex-shrink: 1;
+        flex-wrap: wrap;
     }
 
     #plan{
@@ -315,6 +315,16 @@ a{
     #testimonials{
         display: flex;
         flex-direction: column;
+        text-align: center;
+    }
+
+    #about{
+        background-color: var(--blue);
+    }
+
+    div#about{
+        display: flex;
+        flex-wrap: wrap;
         text-align: center;
     }
 
